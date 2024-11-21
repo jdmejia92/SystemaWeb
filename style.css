@@ -1,0 +1,177 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  flex-shrink: 0;
+  width: 220px;
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+aside h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Menú de navegación */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menu li {
+  margin-bottom: 0.5rem;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  background-color: #343a40;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #495057;
+}
+
+/* Submenús */
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Ocultar por defecto */
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  background-color: #495057; /* Mismo color que el hover */
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.submenu a:hover {
+  background-color: #6c757d;
+}
+
+/* Mostrar submenús */
+.has-submenu:hover > .submenu {
+  display: block; /* Mostrar submenú al pasar el ratón */
+}
+
+/* Asegurar el espaciado entre submenús y elementos principales */
+.has-submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: top; /* Centra verticalmente */
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #495057;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #dee2e6;
+  width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centra el contenido */
+}
+
+table th, table td {
+  padding: 1rem;
+  text-align: center; /* Asegura que el contenido esté centrado */
+  border: 1px solid #dee2e6;
+}
+
+table th {
+  background-color: #343a40;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  main {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table th, table td {
+    padding: 0.5rem;
+  }
+}
